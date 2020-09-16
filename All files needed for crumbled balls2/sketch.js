@@ -2,7 +2,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-var log1,log2,log3,log4,paper,DUSt,popr;
+var log1,log2,log3,log4,paper,DUST,popr;
 
 function preload()
 {
@@ -44,10 +44,12 @@ function draw() {
   log3.display();
   log4.display();
   paper.display();
- 
- 
   drawSprites();
-  keyPressed();
+ keyPressed();
+ popr.x=paper.position.x
+ popr.y=paper.position.y
+ 
+  
  
 }
 
