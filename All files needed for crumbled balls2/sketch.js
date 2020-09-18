@@ -20,7 +20,7 @@ function setup() {
   //Create the Bodies Here.
   DUST=createSprite(800,385,10,10)
 log1=new Stick(800,475,150,13);
-log2=new Stick(728.5,435,15,210);
+log2=new Stick(728.5,435,15,200);
 log3=new Stick(872,435,15,210);
 log4=new Ground(500,490,1100,20)
 paper=new Ball(50,470,10)
@@ -46,8 +46,8 @@ function draw() {
   paper.display();
   drawSprites();
  keyPressed();
- popr.x=paper.position.x
- popr.y=paper.position.y
+ popr.x=paper.body.position.x
+ popr.y=paper.body.position.y
  
   
  
@@ -56,7 +56,7 @@ function draw() {
 function keyPressed(){
 if(keyCode=== UP_ARROW){
 Matter.Body.applyForce(paper.body,paper.body.position,{x:
-  3,y:-3})
+  0.2,y:-0.2})
 
 }
 
